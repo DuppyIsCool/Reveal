@@ -1,0 +1,16 @@
+name: Reveal
+main: me.DuppyIsCool.Reveal.Main
+author: DuppyIsCool
+version: 1.0
+api-version: 1.15
+description: Reveal's all player's locations on the server on a set time.
+commands:
+    stopreveal:
+        description: Stops the active reveal timer
+        usage: /<command>
+    startreveal:
+        description: Starts a reveal timer.
+        usage: /<command>
+    reloadreveal:
+        description: Reloads the reveal config
+        usage: /<command>

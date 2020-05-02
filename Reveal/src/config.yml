@@ -1,0 +1,12 @@
+reveal:
+    #Time in seconds
+    time: 600
+    #Startup Delay
+    delay: 5
+    #InitialMessage (this is optional)
+    initialmessage: "&6==&aPlayer Locations!&6=="
+    #Message that displays when broadcasting.
+    #You can customize the message with color codes using '&' as the color code character
+    #You can insert the player's name with %player% and their x,y, and z with %x%,%y%,%z% respectively.
+    #Also, the message must be in quotes or an error will be thrown.
+    message: "&e%player%'s location: &a%x%,%y%,%z%"
