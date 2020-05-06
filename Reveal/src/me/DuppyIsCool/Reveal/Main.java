@@ -31,7 +31,7 @@ public class Main extends JavaPlugin implements CommandExecutor{
 		Plugin.plugin = this;
 		Bukkit.getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "Started a location reveal with the length of "+time + " seconds and delay of "+delay + " seconds.");
 		if(delay >= 0 && time >= 0) {
-			revealtask = new RevealTask().runTaskTimer(this,20 * delay,20*time);
+			revealtask = new RevealTask(time).runTaskTimer(this,20 * delay,20);
 		}
 		else {
 			Bukkit.getServer().getConsoleSender().sendMessage(ChatColor.RED + "ERROR: Delay or time are less than 0. Disabling plugin");
@@ -64,7 +64,7 @@ public class Main extends JavaPlugin implements CommandExecutor{
 		else if (command.getName().equalsIgnoreCase("startreveal")) {
 			if((sender.hasPermission("reveal.start") || sender.isOp())) {
 				if(revealtask.isCancelled()) {
-					revealtask = new RevealTask().runTaskTimer(this,20*delay,20*time);
+					revealtask = new RevealTask(time).runTaskTimer(this,20*delay,20);
 					sender.sendMessage(ChatColor.GREEN + "Reveal timer started with an interval of "+time + " seconds and a delay of "+delay+" seconds.");
 					return true;
 				}
